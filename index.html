@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Magic Lamp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/svgs/logo_icone.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body >
+    <div class="loading">
+        <div class="custom-loader"></div>
+    </div>
+    <div class="container">
+        <header class="mb-3 " style="height: 10vh;">
+            <section class="text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <h1><img src="assets/svgs/logo.svg" class="img-fluid rounded-top" alt="Logo MagicLamp"
+                                width="200" /></h1>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+
+        <!-- Aprensetação magiclamp -->
+        <section id="sobre" class="row" style="min-height: 92vh;">
+
+            <!-- Aprensetação magiclamp TELA > MD EXIBE-->
+            <div class="d-none d-lg-block">
+                <div class="row mt-5 mt-5">
+                    <div class="col-3">
+                        <div class="text-center"><img src="assets/svgs/G5.svg" class="img-fluid rounded-top"
+                                alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="text-center" style="font-size: 1.2rem;">
+                            O Magic Lamp é um app criado para acertar
+                            sempre na hora de realizar seus desejos: você pode montar suas listas de itens para diversas
+                            ocasiões e mostrar para suas conexões o que você gostaria de ganhar.
+                            <br />
+                            <br />
+                            Além disso, você poderá organizar eventos, tais como: aniversário, churrasco, amigo secreto,
+                            casamento, chás (bebê, revelação, mãe, entre outros).
+                            <br />
+                            <br />
+                            Convide seus amigos e compartilhem a lista do evento com todos em um único lugar.
+                            <br />
+                            <br />
+                            Através do Magic Lamp você também terá acesso às listas dos seus amigos e poderá acertar na
+                            hora de presentea-lo, ou seja:
+                            errar no presente, nunca mais!
+                        </h2>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="text-center"><img src="assets/svgs/G10.svg" class="img-fluid rounded-top"
+                                alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center mt-5" style="text-align: end !important;">                        
+                        <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"><img alt="Baixe da App Store" src="assets/pngs/apple_button.png" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+                    </div>
+                    <div class="col-6 text-center mt-5" style="text-align: start !important;">                        
+                        <a href='https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='assets/pngs/google-play-badge.png' style="border-radius: 13px; width: 250px; height: 83px;"/></a>
+                    </div>
+                    <div class="col-12 text-center mt-5">
+                        <a href="#funcoes" class="btn btn-primary button">Veja as funções</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Aprensetação magiclamp TELA < MD EXIBE-->
+            <div class="d-block d-lg-none">
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <div class="text-center"><img src="assets/svgs/G5.svg" class="img-fluid rounded-top"
+                                alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-center" style="font-size: 1rem;">
+                            O Magic Lamp é um app criado para acertar
+                            sempre na hora de realizar seus desejos: você pode montar suas listas de itens para diversas
+                            ocasiões e mostrar para suas conexões o que você gostaria de ganhar.
+                            <br />
+                            <br />
+                            Além disso, você poderá organizar eventos, tais como: aniversário, churrasco, amigo secreto,
+                            casamento, chás (bebê, revelação, mãe, entre outros).
+                            <br />
+                            <br />
+                            Convide seus amigos e compartilhem a lista do evento com todos em um único lugar.
+                            <br />
+                            <br />
+                            Através do Magic Lamp você também terá acesso às listas dos seus amigos e poderá acertar na
+                            hora de presentea-lo, ou seja:
+                            errar no presente, nunca mais!
+                        </h2>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center mt-1" style="text-align: center !important;">                        
+                        <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"><img alt="Baixe da App Store" src="assets/pngs/apple_button.png" style="border-radius: 13px; width: 250px; height: 83px;"></a>
+                    </div>
+                    <div class="col-12 text-center mt-1" style="text-align: center !important;">                        
+                        <a href='https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='assets/pngs/google-play-badge.png' style="border-radius: 13px; width: 250px; height: 83px;"/></a>
+                    </div>
+                    <div class="col-12 text-center mt-3">
+                        <a href="#funcoes" class="btn btn-primary button">Veja as funções</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <!-- FUNÇÕES -->
+        <main id="funcoes" class="row pt-5" style="min-height: 100vh;">
+
+            <!-- Aprensetação magiclamp TELA > MD EXIBE-->
+            <div class="d-none d-lg-block">
+                <div class="row">
+                    <div class="col-6 pl-5">
+                        <h2 class="text-start" style="font-size: 2.0rem;">
+                            Imagine no seu <span class="destaque_palavra">aniversário</span> ou qualquer ocasião
+                            especial <span class="destaque_palavra">ganhar aquilo que realmente deseja!</span>
+                        </h2>
+                    </div>
+                    <div class="col-6 px-5">
+                        <div class="text-end"><img src="assets/pngs/mulher.png" width="700"
+                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                </div>
+
+                <div class="mt-5" id="cards">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/list.svg" width="45" class="img-fluid rounded-top"
+                                        alt="Imagem de lista" />
+                                    <h3 class="card-title mt-3 mb-4">Lista</h3>
+                                    <p class="card-text">
+                                        Separe os itens desejados por listas de acordo com datas comemorativas, ocasião,
+                                        eventos e mais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/heart.svg" width="50" class="img-fluid rounded-top"
+                                        alt="Imagem de coração" />
+                                    <h3 class="card-title mt-3 mb-4">Social</h3>
+                                    <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie para
+                                        seu perfil no Instagram e Facebook.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/event.svg" width="40" class="img-fluid rounded-top"
+                                        alt="Imagem de evento" />
+                                    <h3 class="card-title mt-3 mb-4">Eventos</h3>
+                                    <p class="card-text">Eventos pré-definidos para você organizar, convidar e
+                                        centralizar todo mundo em um único lugar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/bell.svg" width="45" class="img-fluid rounded-top"
+                                        alt="Imagem de lista" />
+                                    <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
+                                    <p class="card-text">
+                                        Você receberá uma mensagem quando um amigo publicar um presente que você deu.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/message.svg" width="45" class="img-fluid rounded-top"
+                                        alt="Imagem de coração" />
+                                    <h3 class="card-title mt-3 mb-4">Social</h3>
+                                    <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam que
+                                        é você. Não estrague a surpresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="assets/svgs/location.svg" width="45" class="img-fluid rounded-top"
+                                        alt="Imagem de evento" />
+                                    <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
+                                    <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões de
+                                        forma fácil e intuitiva. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+            <!-- Aprensetação magiclamp TELA < MD EXIBE-->
+            <div class="d-block d-lg-none">
+                <div class="row">
+                    <div class="col-12 pl-5">
+                        <h2 class="text-start" style="font-size: 2.0rem;">
+                            Imagine no seu <span class="destaque_palavra">aniversário</span> ou qualquer ocasião
+                            especial <span class="destaque_palavra">ganhar aquilo que realmente deseja!</span>
+                        </h2>
+                    </div>
+                    <div class="col-12 px-5">
+                        <div class="text-end"><img src="assets/pngs/mulher.png" width="700"
+                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                </div>
+                <!-- TELA > MD EXIBE -->
+                <div class="d-none d-md-block">
+                    <div class="mt-5 mobile" id="cards">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/list.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de lista" />
+                                        <h3 class="card-title mt-3 mb-4">Lista</h3>
+                                        <p class="card-text">
+                                            Separe os itens desejados por listas de acordo com datas comemorativas,
+                                            ocasião,
+                                            eventos e mais.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/heart.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de coração" />
+                                        <h3 class="card-title mt-3 mb-4">Social</h3>
+                                        <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie
+                                            para
+                                            seu perfil no Instagram e Facebook.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/event.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de evento" />
+                                        <h3 class="card-title mt-3 mb-4">Eventos</h3>
+                                        <p class="card-text">Eventos pré-definidos para você organizar, convidar e
+                                            centralizar todo mundo em um único lugar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/bell.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de lista" />
+                                        <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
+                                        <p class="card-text">
+                                            Você receberá uma mensagem quando um amigo publicar um presente que você
+                                            deu.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/message.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de coração" />
+                                        <h3 class="card-title mt-3 mb-4">Social</h3>
+                                        <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam
+                                            que
+                                            é você. Não estrague a surpresa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/location.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de evento" />
+                                        <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
+                                        <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões
+                                            de
+                                            forma fácil e intuitiva. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- TELA < MD EXIBE -->
+                <div class="d-block d-md-none">
+                    <div class="mt-5" id="cards">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/list.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de lista" />
+                                        <h3 class="card-title mt-3 mb-4">Lista</h3>
+                                        <p class="card-text">
+                                            Separe os itens desejados por listas de acordo com datas comemorativas,
+                                            ocasião,
+                                            eventos e mais.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/heart.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de coração" />
+                                        <h3 class="card-title mt-3 mb-4">Social</h3>
+                                        <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie
+                                            para
+                                            seu perfil no Instagram e Facebook.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/event.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de evento" />
+                                        <h3 class="card-title mt-3 mb-4">Eventos</h3>
+                                        <p class="card-text">Eventos pré-definidos para você organizar, convidar e
+                                            centralizar todo mundo em um único lugar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/bell.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de lista" />
+                                        <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
+                                        <p class="card-text">
+                                            Você receberá uma mensagem quando um amigo publicar um presente que você
+                                            deu.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/message.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de coração" />
+                                        <h3 class="card-title mt-3 mb-4">Social</h3>
+                                        <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam
+                                            que
+                                            é você. Não estrague a surpresa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="assets/svgs/location.svg" class="img-fluid rounded-top"
+                                            alt="Imagem de evento" />
+                                        <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
+                                        <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões
+                                            de
+                                            forma fácil e intuitiva. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 text-center mt-3">
+                <a href="#seja_um_tester" class="btn btn-primary button">Seja um tester</a>
+            </div>
+
+        </main>
+
+        <!-- FORMULÁRIO magiclamp -->
+        <section id="seja_um_tester" class="row mt-5" style="min-height: 85vh;">
+
+            <!-- FORMULÁRIO magiclamp TELA > MD EXIBE-->
+            <div class="d-none d-lg-block">
+                <div class="row mt-5 mt-5">
+                    <div class="col-3">
+                        <div class="text-center"><img src="assets/svgs/G3.svg" class="img-fluid rounded-top"
+                                alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="text-center destaque_palavra" style="font-size: 2.2rem;">Se a lâmpada é mágica,
+                            estejam preparados para o encanto!</h2>
+                        <h3 class="text-center mb-4" style="font-size: 1.8rem;">Cadastre-se e seja um tester</h3>
+                        <form id="form_site">
+                            <div class="ms-5 me-5">
+                                <input type="text" class="form-control mb-4" name="nome" id="nome" required
+                                    aria-describedby="Nome" placeholder="Nome*" />
+                                <input type="email" class="form-control mb-4" name="email" id="email" required
+                                    aria-describedby="E-mail" placeholder="E-mail*" />
+                                <input type="text" class="form-control mb-4" name="telefone" id="telefone" required
+                                    aria-describedby="Telefone" placeholder="Telefone*" />
+                                <div class="row">
+                                    <div class="col-1">
+                                        <input class="form-check-input mt-0 checkbox" type="checkbox" value="true"
+                                            required
+                                            aria-label="Concordo em fornecer meus dados para Termo de Uso e Política de Privacidade. Receber conteúdos e ofertas por e-mail ou outros meios. Políticas de Privacidade"
+                                            style="vertical-align: middle;">
+                                    </div>
+                                    <div class="col-11">
+                                        <label class="destaque_palavra" style="font-size: 0.8rem;">Concordo em fornecer
+                                            meus
+                                            dados
+                                            para Termo de Uso e Política de Privacidade, receber conteúdos e ofertas por
+                                            e-mail ou outros meios.
+                                            Políticas de Privacidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center mt-3">
+                                <button type="submit" class="btn btn-primary button">Cadastre-se</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="col-3">
+                        <div class="text-center mirror"><img src="assets/svgs/G8.svg"
+                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- FORMULÁRIO magiclamp TELA < MD EXIBE-->
+            <div class="d-block d-lg-none">
+                <div class="row mt-5">
+                    <div class="col-12 mb-2">
+                        <div class="text-center"><img src="assets/svgs/G8.svg" class="img-fluid rounded-top"
+                                alt="Imagem do Gênio da MagicLamp" /></div>
+                    </div>
+                    <div class="col-12">
+                        <h2 class="text-center destaque_palavra" style="font-size: 2.2rem;">Se a lâmpada é mágica,
+                            estejam preparados para o encanto!</h2>
+                        <h3 class="text-center mb-4" style="font-size: 1.8rem;">Cadastre-se e seja um tester</h3>
+                        <form id="form_site">
+                            <div class="ms-5 me-5">
+                                <input type="text" class="form-control mb-4" name="nome" id="nome" required
+                                    aria-describedby="Nome" placeholder="Nome*" />
+                                <input type="text" class="form-control mb-4" name="email" id="email" required
+                                    aria-describedby="E-mail" placeholder="E-mail*" />
+                                <input type="text" class="form-control mb-4" name="telefone" id="telefone" required
+                                    aria-describedby="Telefone" placeholder="Telefone*" />
+                                <div class="row">
+                                    <div class="col-1">
+                                        <input class="form-check-input mt-0 checkbox" type="checkbox" value="true"
+                                            required
+                                            aria-label="Concordo em fornecer meus dados para Termo de Uso e Política de Privacidade. Receber conteúdos e ofertas por e-mail ou outros meios. Políticas de Privacidade"
+                                            style="vertical-align: middle;">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="destaque_palavra" style="font-size: 0.8rem;">Concordo em fornecer
+                                            meus
+                                            dados
+                                            para Termo de Uso e Política de Privacidade, receber conteúdos e ofertas por
+                                            e-mail ou outros meios.
+                                            Políticas de Privacidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center mt-3">
+                                <button type="submit" class="btn btn-primary button">Cadastre-se</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                style="background-color: var(--custom-PINK);">
+                <div class="toast-header" style="background-color: var(--custom-PINK);">
+                    <img src="assets/svgs/logo_icone.svg" class="rounded me-2" alt="logo magiclamp" width="20">
+                    <strong class="me-auto" style="color: white;">Magic Lamp</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Solicitação enviada com sucesso, Obrigado!
+                </div>
+            </div>
+        </div>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                style="background-color: var(--custom-PINK);">
+                <div class="toast-header" style="background-color: var(--custom-PINK);">
+                    <img src="assets/svgs/logo_icone.svg" class="rounded me-2" alt="logo magiclamp" width="20">
+                    <strong class="me-auto" style="color: white;">Magic Lamp</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Erro ao tentar enviar solicitação
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="text-center" style="color: var(--custom-GOLD);">
+            <div class="d-flex justify-content-evenly mb-3 mt-3" style="font-weight: bolder;">
+                <div class=""><a class="link" href="#seja_um_tester">Cadastre-se</a></div>
+                <div class=""><a class="link" href="#sobre">Quem somos</a></div>
+                <div class=""><a class="link" href="#funcoes">Funções</a></div>
+            </div>
+            <div class="row justify-content-center align-items-center g-2 mb-3">
+                <div class="col-12">Copyright<sup>&copy;</sup> 2021 Magic Tech Co. Ltda<sup>&copy;</sup> 2022 - Todos os
+                    direitos reservados.</div>
+            </div>
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col-12">
+                    CNPJ: 45.561.112/0001-50
+                </div>
+            </div>
+
+
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script> -->
+<script src="javascript.js"></script>
+
+</html>
