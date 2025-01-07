@@ -1,577 +1,839 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <title>Magic Lamp</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Magic Lamp</title>
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/svgs/logo_icone.svg">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Fonte Gotham (exemplo) -->
+  <link rel="stylesheet" href="font.css" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body >
-    <div class="loading">
-        <div class="custom-loader"></div>
-    </div>
+<body>
+  <!-- HEADER -->
+  <div class="hero-section">
+    <!-- Use .navbar-dark para manter toggler/botão hambúrguer claro em fundo escuro/transparente -->
+    <header class="navbar navbar-dark  justify-content-between px-3 fixed-top custom-navbar">
+      <div class="container">
+
+        <!-- Logo à esquerda -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/svgs/logo.svg" alt="Logo" width="150" />
+        </a>
+        <!-- Dropdown de idiomas (com bandeira) -->
+        <div class="language-switch ms-lg-3">
+          <input type="checkbox" class="language-checkbox" id="langToggle" onclick="toggleLanguageSwitch()" />
+          <label for="langToggle" class="language-label">
+            <!-- PT -->
+            <div class="lang-option lang-option-pt">
+              <img src="assets/svgs/brazil.svg" alt="Bandeira do Brasil" class="flag-icon" />
+              <span class="ms-1 d-none d-sm-inline">PT</span>
+            </div>
+            <!-- EN -->
+            <div class="lang-option lang-option-en">
+              <img src="assets/svgs/eua.svg" alt="Bandeira do Reino Unido" class="flag-icon" />
+              <span class="ms-1 d-none d-sm-inline">EN</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- FIM HEADER -->
+
+    <!-- 1ª SEÇÃO -->
+    <section class="pt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Coluna da esquerda (Texto) -->
+          <div class="col-md-6">
+            <!-- Título Principal -->
+            <h1 class="mb-3 unbounded display-3">
+              <span class="lang-pt">Magic Lamp:</span>
+              <span class="lang-en">Magic Lamp:</span>
+            </h1>
+            <!-- Subtítulo -->
+            <h2 class="mb-4 unbounded" style="color: white; font-weight: 300;">
+              <!-- PT -->
+              <span class="lang-pt">
+                Sua <strong>Lista de Desejos</strong> realizada<br />
+                com um <span class="gold-title"><strong>Toque de Magia</strong></span>
+              </span>
+              <!-- EN -->
+              <span class="lang-en">
+                Your <strong>Wishlist</strong> fulfilled<br />
+                with a <span class="gold-title"><strong>Touch of Magic</strong></span>
+              </span>
+            </h2>
+
+            <!-- Texto descritivo -->
+            <p class="lang-pt">
+              Crie e compartilhe listas de desejos e eventos em um único app.
+              Deixe a magia do gênio conectar você aos seus amigos e familiares
+              para tornar cada presente e cada celebração mais especial.
+            </p>
+            <p class="lang-en">
+              Create and share wishlists and events in a single app. Let the genie’s
+              magic connect you with friends and family, making every gift and
+              celebration more special.
+            </p>
+            <br />
+            <div class="mt-3 mb-3">
+              <strong class="unbounded lang-pt">
+                Baixe agora e deixe seus desejos se tornarem realidade!
+              </strong>
+              <strong class="unbounded lang-en">
+                Download now and watch your wishes come true!
+              </strong>
+            </div>
+
+            <!-- Botões de download -->
+            <div class="lang-pt">
+              <div class="d-flex flex-wrap gap-2">
+                <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+                  target="_blank"><img alt="Baixe da App Store / Download on App Store" src="assets/svgs/app_store.svg"
+                    style="width: 172px; height: 56px;" /></a>
+                <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                  target="_blank"><img alt="Disponível no Google Play / Get it on Google Play"
+                    src="assets/svgs/google_store.svg" style="width: 172px; height: 56px;" /></a>
+              </div>
+            </div>
+            <div class="lang-en">
+              <div class="d-flex flex-wrap gap-2">
+                <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+                  target="_blank"><img alt="Baixe da App Store / Download on App Store"
+                    src="assets/svgs/app_store_en.svg" style="width: 172px; height: 56px;" /></a>
+                <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                  target="_blank"><img alt="Disponível no Google Play / Get it on Google Play"
+                    src="assets/svgs/google_store_en.svg" style="width: 172px; height: 56px;" /></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna da direita (Imagem) -->
+          <div class="col-md-6 text-center mt-4 mt-md-0">
+            <img src="assets/pngs/phone.png" alt="Imagem ilustrativa / Illustrative Image" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- FIM 1ª SEÇÃO -->
+
+  <!-- 2ª SEÇÃO -->
+  <section class="py-5" id="recursos">
     <div class="container">
-        <header class="mb-3 " style="height: 10vh;">
-            <section class="text-center">
-                <div class="row">
-                    <div class="col-12">
-                        <h1><img src="assets/svgs/logo.svg" class="img-fluid rounded-top" alt="Logo MagicLamp"
-                                width="200" /></h1>
-                    </div>
-                </div>
-            </section>
-        </header>
+      <!-- Título e subtítulo -->
+      <div class="text-center mb-5">
+        <h2>
+          <span class="lang-pt">Recursos Incríveis para Facilitar Suas Celebrações</span>
+          <span class="lang-en">Amazing Features to Streamline Your Celebrations</span>
+        </h2>
+        <p>
+          <span class="lang-pt">
+            Descubra como o Magic Lamp transforma desejos em realidade, simplificando
+            a organização de eventos e compartilhamento de presentes.
+          </span>
+          <span class="lang-en">
+            Learn how Magic Lamp turns dreams into reality by simplifying event
+            planning and gift sharing.
+          </span>
+        </p>
+      </div>
 
-
-        <!-- Aprensetação magiclamp -->
-        <section id="sobre" class="row" style="min-height: 92vh;">
-
-            <!-- Aprensetação magiclamp TELA > MD EXIBE-->
-            <div class="d-none d-lg-block">
-                <div class="row mt-5 mt-5">
-                    <div class="col-3">
-                        <div class="text-center"><img src="assets/svgs/G5.svg" class="img-fluid rounded-top"
-                                alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                    <div class="col-6">
-                        <h2 class="text-center" style="font-size: 1.2rem;">
-                            O Magic Lamp é um app criado para acertar
-                            sempre na hora de realizar seus desejos: você pode montar suas listas de itens para diversas
-                            ocasiões e mostrar para suas conexões o que você gostaria de ganhar.
-                            <br />
-                            <br />
-                            Além disso, você poderá organizar eventos, tais como: aniversário, churrasco, amigo secreto,
-                            casamento, chás (bebê, revelação, mãe, entre outros).
-                            <br />
-                            <br />
-                            Convide seus amigos e compartilhem a lista do evento com todos em um único lugar.
-                            <br />
-                            <br />
-                            Através do Magic Lamp você também terá acesso às listas dos seus amigos e poderá acertar na
-                            hora de presentea-lo, ou seja:
-                            errar no presente, nunca mais!
-                        </h2>
-                    </div>
-
-                    <div class="col-3">
-                        <div class="text-center"><img src="assets/svgs/G10.svg" class="img-fluid rounded-top"
-                                alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-center mt-5" style="text-align: end !important;">                        
-                        <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"><img alt="Baixe da App Store" src="assets/pngs/apple_button.png" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-                    </div>
-                    <div class="col-6 text-center mt-5" style="text-align: start !important;">                        
-                        <a href='https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='assets/pngs/google-play-badge.png' style="border-radius: 13px; width: 250px; height: 83px;"/></a>
-                    </div>
-                    <div class="col-12 text-center mt-5">
-                        <a href="#funcoes" class="btn btn-primary button">Veja as funções</a>
-                    </div>
-                </div>
+      <div class="row align-items-center">
+        <!-- Coluna da esquerda (3 cards) -->
+        <div class="col-md-4">
+          <!-- Card 1 -->
+          <div class="card border-0 mb-4 text-center">
+            <div class="card-body">
+              <img src="assets/svgs/people.svg" alt="Ícone Convide Seus Amigos / Icon Invite Friends" class="mb-3" />
+              <h5 class="card-title">
+                <span class="lang-pt">Convide Seus Amigos</span>
+                <span class="lang-en">Invite Your Friends</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Conecte-se com amigos e visualize suas listas de desejos para
+                  presentear com confiança e criatividade.
+                </span>
+                <span class="lang-en">
+                  Connect with friends and see their wishlists to gift confidently
+                  and creatively.
+                </span>
+              </p>
             </div>
-
-
-            <!-- Aprensetação magiclamp TELA < MD EXIBE-->
-            <div class="d-block d-lg-none">
-                <div class="row">
-                    <div class="col-12 mb-2">
-                        <div class="text-center"><img src="assets/svgs/G5.svg" class="img-fluid rounded-top"
-                                alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                    <div class="col-12">
-                        <h2 class="text-center" style="font-size: 1rem;">
-                            O Magic Lamp é um app criado para acertar
-                            sempre na hora de realizar seus desejos: você pode montar suas listas de itens para diversas
-                            ocasiões e mostrar para suas conexões o que você gostaria de ganhar.
-                            <br />
-                            <br />
-                            Além disso, você poderá organizar eventos, tais como: aniversário, churrasco, amigo secreto,
-                            casamento, chás (bebê, revelação, mãe, entre outros).
-                            <br />
-                            <br />
-                            Convide seus amigos e compartilhem a lista do evento com todos em um único lugar.
-                            <br />
-                            <br />
-                            Através do Magic Lamp você também terá acesso às listas dos seus amigos e poderá acertar na
-                            hora de presentea-lo, ou seja:
-                            errar no presente, nunca mais!
-                        </h2>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center mt-1" style="text-align: center !important;">                        
-                        <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"><img alt="Baixe da App Store" src="assets/pngs/apple_button.png" style="border-radius: 13px; width: 250px; height: 83px;"></a>
-                    </div>
-                    <div class="col-12 text-center mt-1" style="text-align: center !important;">                        
-                        <a href='https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Disponível no Google Play' src='assets/pngs/google-play-badge.png' style="border-radius: 13px; width: 250px; height: 83px;"/></a>
-                    </div>
-                    <div class="col-12 text-center mt-3">
-                        <a href="#funcoes" class="btn btn-primary button">Veja as funções</a>
-                    </div>
-                </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card border-0 mb-4 text-center">
+            <div class="card-body">
+              <img src="assets/svgs/check.svg" alt="Ícone Crie Listas / Icon Create Lists" class="mb-3" />
+              <h5 class="card-title">
+                <span class="lang-pt">Crie Listas de Desejos Personalizadas</span>
+                <span class="lang-en">Create Personalized Wishlists</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Organize listas para todas as ocasiões e adicione descrições e
+                  fotos. De aniversários a viagens dos sonhos, escolha o que realmente
+                  deseja ganhar.
+                </span>
+                <span class="lang-en">
+                  Organize lists for all occasions and add descriptions and photos.
+                  From birthdays to dream trips, choose what you really want to get.
+                </span>
+              </p>
             </div>
-
-
-
-
-        </section>
-
-        <!-- FUNÇÕES -->
-        <main id="funcoes" class="row pt-5" style="min-height: 100vh;">
-
-            <!-- Aprensetação magiclamp TELA > MD EXIBE-->
-            <div class="d-none d-lg-block">
-                <div class="row">
-                    <div class="col-6 pl-5">
-                        <h2 class="text-start" style="font-size: 2.0rem;">
-                            Imagine no seu <span class="destaque_palavra">aniversário</span> ou qualquer ocasião
-                            especial <span class="destaque_palavra">ganhar aquilo que realmente deseja!</span>
-                        </h2>
-                    </div>
-                    <div class="col-6 px-5">
-                        <div class="text-end"><img src="assets/pngs/mulher.png" width="700"
-                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                </div>
-
-                <div class="mt-5" id="cards">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/list.svg" width="45" class="img-fluid rounded-top"
-                                        alt="Imagem de lista" />
-                                    <h3 class="card-title mt-3 mb-4">Lista</h3>
-                                    <p class="card-text">
-                                        Separe os itens desejados por listas de acordo com datas comemorativas, ocasião,
-                                        eventos e mais.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/heart.svg" width="50" class="img-fluid rounded-top"
-                                        alt="Imagem de coração" />
-                                    <h3 class="card-title mt-3 mb-4">Social</h3>
-                                    <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie para
-                                        seu perfil no Instagram e Facebook.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/event.svg" width="40" class="img-fluid rounded-top"
-                                        alt="Imagem de evento" />
-                                    <h3 class="card-title mt-3 mb-4">Eventos</h3>
-                                    <p class="card-text">Eventos pré-definidos para você organizar, convidar e
-                                        centralizar todo mundo em um único lugar.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/bell.svg" width="45" class="img-fluid rounded-top"
-                                        alt="Imagem de lista" />
-                                    <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
-                                    <p class="card-text">
-                                        Você receberá uma mensagem quando um amigo publicar um presente que você deu.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/message.svg" width="45" class="img-fluid rounded-top"
-                                        alt="Imagem de coração" />
-                                    <h3 class="card-title mt-3 mb-4">Social</h3>
-                                    <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam que
-                                        é você. Não estrague a surpresa.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <img src="assets/svgs/location.svg" width="45" class="img-fluid rounded-top"
-                                        alt="Imagem de evento" />
-                                    <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
-                                    <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões de
-                                        forma fácil e intuitiva. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card border-0 mb-4 text-center">
+            <div class="card-body">
+              <img src="assets/svgs/party.svg" alt="Ícone Planeje Eventos / Icon Plan Events" class="mb-3" />
+              <h5 class="card-title">
+                <span class="lang-pt">Planeje Eventos Incríveis</span>
+                <span class="lang-en">Plan Amazing Events</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Organize encontros como aniversários, churrascos e festas em um só
+                  lugar. Facilite a interação e mantenha todos os detalhes à mão.
+                </span>
+                <span class="lang-en">
+                  Host gatherings like birthdays, barbecues, and parties in one place.
+                  Simplify interaction and keep all details at hand.
+                </span>
+              </p>
             </div>
-
-
-
-            <!-- Aprensetação magiclamp TELA < MD EXIBE-->
-            <div class="d-block d-lg-none">
-                <div class="row">
-                    <div class="col-12 pl-5">
-                        <h2 class="text-start" style="font-size: 2.0rem;">
-                            Imagine no seu <span class="destaque_palavra">aniversário</span> ou qualquer ocasião
-                            especial <span class="destaque_palavra">ganhar aquilo que realmente deseja!</span>
-                        </h2>
-                    </div>
-                    <div class="col-12 px-5">
-                        <div class="text-end"><img src="assets/pngs/mulher.png" width="700"
-                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                </div>
-                <!-- TELA > MD EXIBE -->
-                <div class="d-none d-md-block">
-                    <div class="mt-5 mobile" id="cards">
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/list.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de lista" />
-                                        <h3 class="card-title mt-3 mb-4">Lista</h3>
-                                        <p class="card-text">
-                                            Separe os itens desejados por listas de acordo com datas comemorativas,
-                                            ocasião,
-                                            eventos e mais.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/heart.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de coração" />
-                                        <h3 class="card-title mt-3 mb-4">Social</h3>
-                                        <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie
-                                            para
-                                            seu perfil no Instagram e Facebook.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/event.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de evento" />
-                                        <h3 class="card-title mt-3 mb-4">Eventos</h3>
-                                        <p class="card-text">Eventos pré-definidos para você organizar, convidar e
-                                            centralizar todo mundo em um único lugar.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/bell.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de lista" />
-                                        <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
-                                        <p class="card-text">
-                                            Você receberá uma mensagem quando um amigo publicar um presente que você
-                                            deu.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/message.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de coração" />
-                                        <h3 class="card-title mt-3 mb-4">Social</h3>
-                                        <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam
-                                            que
-                                            é você. Não estrague a surpresa.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/location.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de evento" />
-                                        <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
-                                        <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões
-                                            de
-                                            forma fácil e intuitiva. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <!-- TELA < MD EXIBE -->
-                <div class="d-block d-md-none">
-                    <div class="mt-5" id="cards">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/list.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de lista" />
-                                        <h3 class="card-title mt-3 mb-4">Lista</h3>
-                                        <p class="card-text">
-                                            Separe os itens desejados por listas de acordo com datas comemorativas,
-                                            ocasião,
-                                            eventos e mais.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/heart.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de coração" />
-                                        <h3 class="card-title mt-3 mb-4">Social</h3>
-                                        <p class="card-text">Compartilhe presentes recebidos com suas conexões e envie
-                                            para
-                                            seu perfil no Instagram e Facebook.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/event.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de evento" />
-                                        <h3 class="card-title mt-3 mb-4">Eventos</h3>
-                                        <p class="card-text">Eventos pré-definidos para você organizar, convidar e
-                                            centralizar todo mundo em um único lugar.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/bell.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de lista" />
-                                        <h3 class="card-title mt-3 mb-4">Acompanhamento</h3>
-                                        <p class="card-text">
-                                            Você receberá uma mensagem quando um amigo publicar um presente que você
-                                            deu.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/message.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de coração" />
-                                        <h3 class="card-title mt-3 mb-4">Social</h3>
-                                        <p class="card-text">Faça perguntas sobre os itens de seus amigos sem que saibam
-                                            que
-                                            é você. Não estrague a surpresa.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mt-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="assets/svgs/location.svg" class="img-fluid rounded-top"
-                                            alt="Imagem de evento" />
-                                        <h3 class="card-title mt-3 mb-4">Pessoas próximas</h3>
-                                        <p class="card-text">Encontre pessoas que estão próximas a você e faça conexões
-                                            de
-                                            forma fácil e intuitiva. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-12 text-center mt-3">
-                <a href="#seja_um_tester" class="btn btn-primary button">Seja um tester</a>
-            </div>
-
-        </main>
-
-        <!-- FORMULÁRIO magiclamp -->
-        <section id="seja_um_tester" class="row mt-5" style="min-height: 85vh;">
-
-            <!-- FORMULÁRIO magiclamp TELA > MD EXIBE-->
-            <div class="d-none d-lg-block">
-                <div class="row mt-5 mt-5">
-                    <div class="col-3">
-                        <div class="text-center"><img src="assets/svgs/G3.svg" class="img-fluid rounded-top"
-                                alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                    <div class="col-6">
-                        <h2 class="text-center destaque_palavra" style="font-size: 2.2rem;">Se a lâmpada é mágica,
-                            estejam preparados para o encanto!</h2>
-                        <h3 class="text-center mb-4" style="font-size: 1.8rem;">Cadastre-se e seja um tester</h3>
-                        <form id="form_site">
-                            <div class="ms-5 me-5">
-                                <input type="text" class="form-control mb-4" name="nome" id="nome" required
-                                    aria-describedby="Nome" placeholder="Nome*" />
-                                <input type="email" class="form-control mb-4" name="email" id="email" required
-                                    aria-describedby="E-mail" placeholder="E-mail*" />
-                                <input type="text" class="form-control mb-4" name="telefone" id="telefone" required
-                                    aria-describedby="Telefone" placeholder="Telefone*" />
-                                <div class="row">
-                                    <div class="col-1">
-                                        <input class="form-check-input mt-0 checkbox" type="checkbox" value="true"
-                                            required
-                                            aria-label="Concordo em fornecer meus dados para Termo de Uso e Política de Privacidade. Receber conteúdos e ofertas por e-mail ou outros meios. Políticas de Privacidade"
-                                            style="vertical-align: middle;">
-                                    </div>
-                                    <div class="col-11">
-                                        <label class="destaque_palavra" style="font-size: 0.8rem;">Concordo em fornecer
-                                            meus
-                                            dados
-                                            para Termo de Uso e Política de Privacidade, receber conteúdos e ofertas por
-                                            e-mail ou outros meios.
-                                            <a href="politica-privacidade.html" style="color:var(--custom-GOLD)">Políticas de Privacidade</a> </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center mt-3">
-                                <button type="submit" class="btn btn-primary button">Cadastre-se</button>
-                            </div>
-                        </form>
-
-                    </div>
-
-                    <div class="col-3">
-                        <div class="text-center mirror"><img src="assets/svgs/G8.svg"
-                                class="img-fluid rounded-top" alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- FORMULÁRIO magiclamp TELA < MD EXIBE-->
-            <div class="d-block d-lg-none">
-                <div class="row mt-5">
-                    <div class="col-12 mb-2">
-                        <div class="text-center"><img src="assets/svgs/G8.svg" class="img-fluid rounded-top"
-                                alt="Imagem do Gênio da MagicLamp" /></div>
-                    </div>
-                    <div class="col-12">
-                        <h2 class="text-center destaque_palavra" style="font-size: 2.2rem;">Se a lâmpada é mágica,
-                            estejam preparados para o encanto!</h2>
-                        <h3 class="text-center mb-4" style="font-size: 1.8rem;">Cadastre-se e seja um tester</h3>
-                        <form id="form_site">
-                            <div class="ms-5 me-5">
-                                <input type="text" class="form-control mb-4" name="nome" id="nome" required
-                                    aria-describedby="Nome" placeholder="Nome*" />
-                                <input type="text" class="form-control mb-4" name="email" id="email" required
-                                    aria-describedby="E-mail" placeholder="E-mail*" />
-                                <input type="text" class="form-control mb-4" name="telefone" id="telefone" required
-                                    aria-describedby="Telefone" placeholder="Telefone*" />
-                                <div class="row">
-                                    <div class="col-1">
-                                        <input class="form-check-input mt-0 checkbox" type="checkbox" value="true"
-                                            required
-                                            aria-label="Concordo em fornecer meus dados para Termo de Uso e Política de Privacidade. Receber conteúdos e ofertas por e-mail ou outros meios. Políticas de Privacidade"
-                                            style="vertical-align: middle;">
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="destaque_palavra" style="font-size: 0.8rem;">Concordo em fornecer
-                                            meus
-                                            dados
-                                            para Termo de Uso e Política de Privacidade, receber conteúdos e ofertas por
-                                            e-mail ou outros meios.
-                                            <a href="politica-privacidade.html" style="color:var(--custom-GOLD)">Políticas de Privacidade</a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center mt-3">
-                                <button type="submit" class="btn btn-primary button">Cadastre-se</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </section>
-
-        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-                style="background-color: var(--custom-PINK);">
-                <div class="toast-header" style="background-color: var(--custom-PINK);">
-                    <img src="assets/svgs/logo_icone.svg" class="rounded me-2" alt="logo magiclamp" width="20">
-                    <strong class="me-auto" style="color: white;">Magic Lamp</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    Solicitação enviada com sucesso, Obrigado!
-                </div>
-            </div>
+          </div>
         </div>
 
-        <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-                style="background-color: var(--custom-PINK);">
-                <div class="toast-header" style="background-color: var(--custom-PINK);">
-                    <img src="assets/svgs/logo_icone.svg" class="rounded me-2" alt="logo magiclamp" width="20">
-                    <strong class="me-auto" style="color: white;">Magic Lamp</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                    Erro ao tentar enviar solicitação
-                </div>
-            </div>
+        <!-- Coluna do meio (Imagem do celular) -->
+        <div class="col-md-4 text-center d-none d-md-block">
+          <img src="assets/pngs/cell-phone.png" alt="Imagem do aplicativo em um celular / App image"
+            class="img-fluid" />
         </div>
 
-
-        <footer class="text-center" style="color: var(--custom-GOLD);">
-            <div class="d-flex justify-content-evenly mb-3 mt-3" style="font-weight: bolder;">
-                <div class=""><a class="link" href="#seja_um_tester">Cadastre-se</a></div>
-                <div class=""><a class="link" href="#sobre">Quem somos</a></div>
-                <div class=""><a class="link" href="#funcoes">Funções</a></div>
+        <!-- Coluna da direita (2 cards + botões de download) -->
+        <div class="col-md-4">
+          <!-- Card 4 -->
+          <div class="card border-0 mb-4 text-center">
+            <div class="card-body">
+              <img src="assets/svgs/person.svg" alt="Ícone Privacidade / Icon Privacy Control" class="mb-3" />
+              <h5 class="card-title">
+                <span class="lang-pt">Controle de Privacidade</span>
+                <span class="lang-en">Privacy Control</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Customize quem pode ver suas listas e eventos, mantendo o controle
+                  de cada detalhe.
+                </span>
+                <span class="lang-en">
+                  Customize who can view your lists and events, keeping every detail
+                  under your control.
+                </span>
+              </p>
             </div>
-            <div class="row justify-content-center align-items-center g-2 mb-3">
-                <div class="col-12">Copyright<sup>&copy;</sup> 2021 Magic Tech Co. Ltda<sup>&copy;</sup> 2022 - Todos os
-                    direitos reservados.</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="card border-0 mb-4 text-center">
+            <div class="card-body">
+              <img src="assets/svgs/chat.svg" alt="Ícone Rede Social / Icon Social Network" class="mb-3" />
+              <h5 class="card-title">
+                <span class="lang-pt">Rede Social de Desejos</span>
+                <span class="lang-en">Social Wish Network</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Descubra os desejos de seus amigos, faça perguntas anônimas e
+                  compartilhe momentos especiais. A magia do presente certo,
+                  na hora certa.
+                </span>
+                <span class="lang-en">
+                  Discover your friends’ wishes, ask anonymous questions, and share
+                  special moments. The magic of the right gift at the right time.
+                </span>
+              </p>
             </div>
-            <div class="row justify-content-center align-items-center g-2">
-                <div class="col-12">
-                    CNPJ: 45.561.112/0001-50
-                </div>
+          </div>
+          <!-- Botões de download -->
+          <div class="lang-pt">
+            <div class="d-flex flex-column flex-md-column gap-2">
+              <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+                target="_blank" class="w-100 w-md-auto">
+                <img alt="Baixe da App Store / Download on the App Store" src="assets/svgs/app_store.svg"
+                  class="btn-store-custom" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                target="_blank" class="w-100 w-md-auto">
+                <img alt="Disponível no Google Play / Get it on Google Play" src="assets/svgs/google_store.svg"
+                  class="btn-store-custom" />
+              </a>
             </div>
-
-
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
+          </div>
+          <div class="lang-en">
+            <div class="d-flex flex-column flex-md-column gap-2">
+              <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+                target="_blank" class="w-100 w-md-auto">
+                <img alt="Baixe da App Store / Download on the App Store" src="assets/svgs/app_store_en.svg"
+                  class="btn-store-custom" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+                target="_blank" class="w-100 w-md-auto">
+                <img alt="Disponível no Google Play / Get it on Google Play" src="assets/svgs/google_store_en.svg"
+                  class="btn-store-custom" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </section>
+  <!-- FIM 2ª SEÇÃO -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-<script src="javascript.js"></script>
+  <!-- 3ª SEÇÃO -->
+  <section class="py-5 bg-light" id="como-funciona">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>
+          <span class="lang-pt">Como o Magic Lamp Funciona</span>
+          <span class="lang-en">How Magic Lamp Works</span>
+        </h2>
+        <p>
+          <span class="lang-pt">
+            Veja como o gênio da lâmpada transforma a experiência de presentear e
+            celebrar em algo simples e mágico.
+          </span>
+          <span class="lang-en">
+            See how the lamp's genie transforms gifting and celebrating into
+            something simple and magical.
+          </span>
+        </p>
+      </div>
+
+      <!-- 5 cards alinhados horizontalmente -->
+      <div class="row row-cols-1 row-cols-md-5 g-4 text-center">
+        <!-- Card 1 -->
+        <div class="col mt-5">
+          <div class="my-card h-100">
+            <div class="number-circle">1</div>
+            <div class="card-body my-card-body">
+              <h5 class="card-title fw-bold mt-3">
+                <span class="lang-pt">Baixe o App</span>
+                <span class="lang-en">Download the App</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Disponível para
+                  <strong class="purple-link">Android</strong> e
+                  <strong class="purple-link">iOS</strong>, com um toque de
+                  magia em cada recurso.
+                </span>
+                <span class="lang-en">
+                  Available for
+                  <strong class="purple-link">Android</strong> and
+                  <strong class="purple-link">iOS</strong>, with a bit of magic in
+                  every feature.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col mt-5">
+          <div class="my-card h-100">
+            <div class="number-circle">2</div>
+            <div class="card-body my-card-body">
+              <h5 class="card-title fw-bold mt-3">
+                <span class="lang-pt">Crie Sua Conta e Conecte-se</span>
+                <span class="lang-en">Create Your Account & Connect</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Cadastre-se e convide seus amigos para explorar juntos o universo
+                  de desejos e presentes.
+                </span>
+                <span class="lang-en">
+                  Sign up and invite your friends to explore the universe of wishes
+                  and gifts together.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col mt-5">
+          <div class="my-card h-100">
+            <div class="number-circle">3</div>
+            <div class="card-body my-card-body">
+              <h5 class="card-title fw-bold mt-3">
+                <span class="lang-pt">Personalize Suas Listas de Desejos</span>
+                <span class="lang-en">Personalize Your Wishlists</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Adicione itens manualmente e escolha entre deixar sua lista
+                  privada ou visível para todos.
+                </span>
+                <span class="lang-en">
+                  Add items manually and choose whether to make your list private or
+                  visible to everyone.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col mt-5">
+          <div class="my-card h-100">
+            <div class="number-circle">4</div>
+            <div class="card-body my-card-body">
+              <h5 class="card-title fw-bold mt-3">
+                <span class="lang-pt">Organize Seus Eventos</span>
+                <span class="lang-en">Organize Your Events</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Centralize suas celebrações e compartilhe as listas com os
+                  convidados para uma experiência mais organizada.
+                </span>
+                <span class="lang-en">
+                  Centralize your celebrations and share lists with your guests for a
+                  more organized experience.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col mt-5">
+          <div class="my-card h-100">
+            <div class="number-circle">5</div>
+            <div class="card-body my-card-body">
+              <h5 class="card-title fw-bold mt-3">
+                <span class="lang-pt">Compartilhe e Celebre</span>
+                <span class="lang-en">Share & Celebrate</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-pt">
+                  Convide seus amigos para visualizar suas listas e comemorem
+                  juntos, com presentes que são realmente desejados.
+                </span>
+                <span class="lang-en">
+                  Invite friends to view your lists and celebrate together with gifts
+                  that are truly desired.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botões de download no final da seção (desktop) -->
+      <div class="lang-pt">
+        <div class="d-none d-md-flex flex-wrap gap-2 justify-content-center text-center mt-5">
+          <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+            target="_blank">
+            <img alt="Baixe da App Store / Download on the App Store" src="assets/svgs/app_store.svg"
+              style="width: 172px; height: 56px;" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            target="_blank">
+            <img alt="Disponível no Google Play / Get it on Google Play" src="assets/svgs/google_store.svg"
+              style="width: 172px; height: 56px;" />
+          </a>
+        </div>
+      </div>
+      <div class="lang-en">
+        <div class="d-none d-md-flex flex-wrap gap-2 justify-content-center text-center mt-5">
+          <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+            target="_blank">
+            <img alt="Baixe da App Store / Download on the App Store" src="assets/svgs/app_store_en.svg"
+              style="width: 172px; height: 56px;" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            target="_blank">
+            <img alt="Disponível no Google Play / Get it on Google Play" src="assets/svgs/google_store_en.svg"
+              style="width: 172px; height: 56px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FIM 3ª SEÇÃO -->
+
+  <!-- 4ª SEÇÃO -->
+  <section class="py-5 hero-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="gold-title">
+          <span class="lang-pt">Veja o Magic Lamp em Ação</span>
+          <span class="lang-en">See Magic Lamp in Action</span>
+        </h2>
+        <p>
+          <strong>
+            <span class="lang-pt">Escolha e assista</span>
+            <span class="lang-en">Choose and watch</span>
+          </strong>
+          <span class="lang-pt">
+            ao gênio da lâmpada realizando desejos e conectando pessoas.
+          </span>
+          <span class="lang-en">
+            the genie fulfilling wishes and connecting people.
+          </span>
+        </p>
+      </div>
+
+      <!-- 3 ícones com botões abaixo -->
+      <div class="row justify-content-center text-center gx-2">
+        <div class="col-md-4 d-flex flex-column align-items-center">
+          <img src="assets/svgs/shared.svg" alt="Ícone Compartilhar / Share Icon" class="mb-3 icon-img" />
+          <a class="btn custom-btn">
+            <span class="lang-pt">Convide Amigos</span>
+            <span class="lang-en">Invite Friends</span>
+          </a>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center">
+          <img src="assets/svgs/add.svg" alt="Ícone Crie Eventos / Create Events Icon" class="mb-3 icon-img" />
+          <a class="btn custom-btn">
+            <span class="lang-pt">Crie Eventos</span>
+            <span class="lang-en">Create Events</span>
+          </a>
+        </div>
+        <div class="col-md-4 d-flex flex-column align-items-center">
+          <img src="assets/svgs/notation.svg" alt="Ícone Crie Listas / Create Lists Icon" class="mb-3 icon-img" />
+          <a class="btn custom-btn">
+            <span class="lang-pt">Crie Listas</span>
+            <span class="lang-en">Create Lists</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- FIM 4ª SEÇÃO -->
+
+  <!-- 5ª SEÇÃO -->
+  <section class="py-5 bg-light" id="faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>O Que Nossos Usuários Dizem</h2>
+        <p>
+          Descubra histórias de quem já deixou o gênio do Magic Lamp
+          transformar suas celebrações.
+        </p>
+      </div>
+
+      <!-- Lista de cards -->
+      <div style="margin-bottom: 50px;">
+        <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card review-card p-3">
+              <img src="assets/svgs/stars.svg" alt="Estrelas" class="me-2 stars" />
+              <h5 class="mb-2 lang-en">Simples e incrível!</h5>
+              <h5 class="mb-2 lang-pt">Simple and incredible!</h5>
+              <p class="lang-pt">
+                Com o Magic Lamp, organizar meu aniversário foi simples e incrível.
+                Meus amigos acertaram nos presentes!
+              </p>
+              <p class="lang-en">
+                With Magic Lamp, organizing my birthday was simple and incredible. My friends got the gifts right!
+              </p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/pngs/fernanda.png" alt="Avatar Usuário" class="rounded-circle me-2"
+                  style="width: 40px; height: 40px; object-fit: cover;" />
+                <span><strong>Fernanda</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card review-card p-3">
+              <img src="assets/svgs/stars.svg" alt="Estrelas" class="me-2 stars" />
+              <h5 class="mb-2 lang-pt">Tudo organizado!</h5>
+              <h5 class="mb-2 lang-en">Everything organized!</h5>
+              <p class="lang-pt">
+                A função de eventos é perfeita para nosso grupo de amigos. Tudo fica
+                organizado e cada um sabe o que levar.
+              </p>
+              <p class="lang-en">
+                The events function is perfect for our group of friends. Everything stays
+                organized and everyone knows what to take.
+              </p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/pngs/natalia.png" alt="Avatar Usuário" class="rounded-circle me-2"
+                  style="width: 40px; height: 40px; object-fit: cover;" />
+                <span><strong>Natália</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card review-card p-3">
+              <img src="assets/svgs/stars.svg" alt="Estrelas" class="me-2 stars" />
+              <h5 class="mb-2 lang-pt">Agora só ganho o que desejo!</h5>
+              <h5 class="mb-2 lang-en">Now I only get what I want!</h5>
+              <p class="lang-pt">
+                O gênio facilita a vida! Finalmente ganho o que realmente desejo, sem
+                surpresas.
+              </p>
+              <p class="lang-en">
+                Genius makes life easier! I finally get what I really want, without any surprises.
+              </p>
+              <div class="d-flex align-items-center mt-2">
+                <img src="assets/pngs/robson.png" alt="Avatar Usuário" class="rounded-circle me-2"
+                  style="width: 40px; height: 40px; object-fit: cover;" />
+                <span><strong>Robson</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha divisória -->
+      <hr />
+      <!-- Perguntas Frequentes (Accordion) -->
+      <div class="row mt-5">
+        <!-- Coluna da esquerda -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h3 class="unbounded purple fs-2">
+            <span class="lang-pt">Perguntas <br />Frequentes</span>
+            <span class="lang-en">Frequently <br />Asked Questions</span>
+          </h3>
+          <p>
+            <span class="lang-pt">
+              Tire suas dúvidas e descubra como o Magic Lamp funciona.
+            </span>
+            <span class="lang-en">
+              Clear up your doubts and discover how Magic Lamp works.
+            </span>
+          </p>
+        </div>
+        <!-- Coluna da direita -->
+        <div class="col-12 col-md-6">
+          <div class="accordion" id="faqAccordion">
+            <!-- Pergunta 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                  <!-- Título da Pergunta (PT/EN) -->
+                  <span class="lang-pt">O Magic Lamp é gratuito?</span>
+                  <span class="lang-en">Is Magic Lamp free?</span>
+                </button>
+              </h2>
+              <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faq1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <!-- Resposta (PT) -->
+                  <span class="lang-pt">
+                    Sim! O Magic Lamp possui uma versão gratuita com diversas
+                    funcionalidades. Também há planos pagos para quem deseja explorar
+                    recursos premium.
+                  </span>
+                  <!-- Resposta (EN) -->
+                  <span class="lang-en">
+                    Yes! Magic Lamp has a free version with a variety of features.
+                    There are also paid plans for those who want to explore premium
+                    functionalities.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                  <!-- Título da Pergunta (PT/EN) -->
+                  <span class="lang-pt">Posso compartilhar listas privadas<br />com apenas alguns amigos?</span>
+                  <span class="lang-en">Can I share private lists<br />with only a few friends?</span>
+                </button>
+              </h2>
+              <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <!-- Resposta (PT) -->
+                  <span class="lang-pt">
+                    Sim, você pode compartilhar listas privadas diretamente com pessoas
+                    específicas, garantindo controle sobre quem pode visualizar ou editar
+                    seus desejos.
+                  </span>
+                  <!-- Resposta (EN) -->
+                  <span class="lang-en">
+                    Yes, you can share private lists directly with specific people,
+                    ensuring control over who can view or edit your wishes.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                  <!-- Título da Pergunta (PT/EN) -->
+                  <span class="lang-pt">Como adiciono itens às minhas listas?</span>
+                  <span class="lang-en">How do I add items to my lists?</span>
+                </button>
+              </h2>
+              <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  <!-- Resposta (PT) -->
+                  <span class="lang-pt">
+                    Você pode adicionar itens às suas listas de forma manual ou usando as
+                    sugestões do próprio Magic Lamp, baseadas nas suas preferências.
+                  </span>
+                  <!-- Resposta (EN) -->
+                  <span class="lang-en">
+                    You can add items to your lists manually or by using Magic Lamp’s
+                    own suggestions, based on your preferences.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+  <!-- FIM 5ª SEÇÃO -->
+
+  <!-- 6ª SEÇÃO (FOOTER) -->
+  <footer class="py-5 footer-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="gold-title">
+          <span class="lang-pt">Pronto para Realizar Seus Desejos?</span>
+          <span class="lang-en">Ready to Make Your Wishes Come True?</span>
+        </h2>
+        <p>
+          <span class="lang-pt">
+            Baixe o Magic Lamp agora e comece a transformar suas celebrações.
+          </span>
+          <span class="lang-en">
+            Download Magic Lamp now and start transforming your celebrations.
+          </span>
+        </p>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+          <!-- Espaço para algo adicional, se quiser -->
+        </div>
+
+        <!-- Botões de download (telas médias e acima) -->
+        <div class="col-md-6 d-none d-md-block text-center text-md-center gap-2">
+          <div class="lang-pt">
+            <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Baixe da App Store" src="assets/svgs/app_store.svg" class="btn-store-custom" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Disponível no Google Play" src="assets/svgs/google_store.svg" class="btn-store-custom" />
+            </a>
+          </div>
+          <div class="lang-en">
+            <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Baixe da App Store" src="assets/svgs/app_store_en.svg" class="btn-store-custom" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Disponível no Google Play" src="assets/svgs/google_store_en.svg" class="btn-store-custom" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Botões de download (mobile) -->
+        <div class="lang-pt">
+          <div class="col-md-6 text-center text-md-center d-md-none d-flex flex-column flex-md-row gap-2 gap-md-0">
+            <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Baixe da App Store" src="assets/svgs/app_store.svg" class="btn-store-custom" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Disponível no Google Play" src="assets/svgs/google_store.svg" class="btn-store-custom" />
+            </a>
+          </div>
+        </div>
+        <div class="lang-en">
+          <div class="col-md-6 text-center text-md-center d-md-none d-flex flex-column flex-md-row gap-2 gap-md-0">
+            <a href="https://apps.apple.com/us/app/magic-lamp/id1623680535?itsct=apps_box_badge&amp;itscg=30200"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Baixe da App Store" src="assets/svgs/app_store_en.svg" class="btn-store-custom" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.br.magiclamp&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              target="_blank" class="w-100 w-md-auto">
+              <img alt="Disponível no Google Play" src="assets/svgs/google_store_en.svg" class="btn-store-custom" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FIM FOOTER -->
+
+  <!-- Bootstrap JS (Popper + Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para alternar idiomas -->
+  <script>
+    // Exibe inicialmente o PT e esconde o EN
+    document.addEventListener("DOMContentLoaded", function () {
+      toggleLanguage("pt");
+    });
+
+    function toggleLanguage(lang) {
+      const ptElements = document.querySelectorAll(".lang-pt");
+      const enElements = document.querySelectorAll(".lang-en");
+
+      if (lang === "pt") {
+        ptElements.forEach((el) => (el.style.display = "inline"));
+        enElements.forEach((el) => (el.style.display = "none"));
+      } else {
+        ptElements.forEach((el) => (el.style.display = "none"));
+        enElements.forEach((el) => (el.style.display = "inline"));
+      }
+    }
+
+    function toggleLanguageSwitch() {
+      const checkBox = document.getElementById("langToggle");
+
+      if (checkBox.checked) {
+        // Se está marcado, definimos como EN
+        toggleLanguage("en");
+      } else {
+        // Se não está marcado, definimos como PT
+        toggleLanguage("pt");
+      }
+    }
+  </script>
+</body>
 
 </html>

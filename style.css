@@ -1,197 +1,310 @@
-/* BG (GREY)        ->  #E9F2F9  */
-/* BG (GREY) 100    ->  #BCBCBC  */
-/* PURPLE           ->  #9100BF  */
-/* PURPLE 300       ->  #B24DD2  */
-/* PINK             ->  #EC00FF */
-/* GOLD             ->  #FFDC27  */
-/* FONTE            ->  #7788A1  */
-
-:root {
-    --custom-BG: #E9F2F9;
-    --custom-BG100: #BCBCBC;
-    --custom-PURPLE: #9100BF;
-    --custom-PURPLE300: #B24DD2;
-    --custom-PINK: #EC00FF;
-    --custom-GOLD: #FFDC27;
-    --custom-GOLDHOUVER: #dab600;
-}
-
+/* Reset de estilos básicos do corpo */
 body {
-    background-color: var(--custom-PURPLE);
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* font-size: 15px; */
+  font-family: "Gotham", sans-serif !important;
+  font-weight: 300 !important; /* Gotham-Light */
+  font-style: normal !important;
+  margin: 0;
+  padding: 0;
 }
 
-.destaque_palavra {
-    color: var(--custom-GOLD);
-    font-size: 3.0rem;
+/* Ajuste de background na primeira seção */
+.hero-section {
+  background: url("assets/pngs/bg.png") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 0; /* Remova paddings nativos se quiser que a imagem ocupe todo o topo */
 }
 
-.button {
-    background-color: var(--custom-GOLD);
-    border-color: var(--custom-GOLD);
-    color: var(--custom-PURPLE300);
-    border-radius: 20px;
-    font-weight: bolder;
+.footer-section {
+  background: url("assets/svgs/footer.svg") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 0 0;
 }
 
-.button:hover {
-    background-color: var(--custom-GOLDHOUVER);
-    border-color: var(--custom-GOLDHOUVER);
-}
-
-.button:focus {
-    background-color: var(--custom-GOLDHOUVER);
-    border-color: var(--custom-GOLDHOUVER);
-}
-
-
-.btn.btn-primary.active.focus,
-.btn.btn-primary.active:focus,
-.btn.btn-primary.active:hover,
-.btn.btn-primary:active.focus,
-.btn.btn-primary:active:focus,
-.btn.btn-primary:active:hover {
+/* Para telas menores, caso queira alterar a imagem de fundo do footer */
+@media (max-width: 767px) {
+  .footer-section {
+    background: url("assets/pngs/bg.png") center center no-repeat;
+    background-size: cover;
     color: #fff;
-    background-color: var(--custom-GOLDHOUVER);
-    border-color: var(--custom-GOLDHOUVER);
-    outline: none;
-    box-shadow: none;
+  }
+}
+
+/* Ajustes gerais de cards, texto, etc. */
+.card {
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+  margin-bottom: 1rem;
+}
+
+.card .card-title {
+  color: #640090 !important;
+  font-weight: bold;
+  font-family: "Unbounded", sans-serif;
+}
+
+.card-body > img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Estilo para o menu com degradê */
+.custom-navbar {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  ); /* Degradê do preto ao transparente */
+  border-bottom: none; /* Remove borda inferior padrão, se houver */
+  transition: background-color 0.3s ease; /* Efeito suave ao alterar o fundo */
+  height: 80px;
+}
+
+/* Adiciona opacidade total ao rolar (opcional) */
+.custom-navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Fundo preto sólido ao rolar */
+}
+
+hr {
+  color: #e0e0e0;
+}
+
+/* Classe para o botão customizado */
+.custom-btn {
+  border-radius: 50px; /* Botão arredondado */
+  border: 2px solid white; /* Borda branca */
+  color: white; /* Texto branco */
+  background-color: transparent; /* Fundo transparente */
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: uppercase; /* Opcional */
+  transition: all 0.3s ease;
+  margin-bottom: 10px; /* Pequeno espaçamento inferior */
+  padding: 10px 40px;
+}
+
+/* Hover do botão customizado */
+.custom-btn:hover {
+  background-color: white;
+  color: #640090; /* Mantendo a cor roxa principal */
+  border-color: #640090;
+}
+
+/* Ícones grandes */
+.icon-img {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+/* Botões de lojas (App Store / Google Play) */
+.btn-store-custom {
+  width: 172px;
+  height: 56px;
+}
+@media (max-width: 767px) {
+  .btn-store-custom {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Títulos e cores */
+.unbounded {
+  font-family: "Unbounded", sans-serif;
+}
+.gold-title {
+  color: #f0b91f;
+  font-family: "Unbounded", sans-serif;
+}
+.purple {
+  color: #640090 !important;
+}
+.purple-link {
+  color: #640090 !important;
+  text-decoration: underline;
+  text-decoration-color: #640090;
+}
+
+/* Cartão personalizado (5 passos) */
+.my-card {
+  position: relative;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.my-card-body {
+  padding-top: 2rem; /* Espaço para o círculo “number-circle” */
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.number-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #640090;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste de margem em telas pequenas, se necessário */
+@media (max-width: 767px) {
+  .my-card {
+    margin: 0 50px;
+  }
+}
+
+/* Accordion personalizado */
+.accordion-button {
+  background-color: #f8f9fa; /* Fundo do cabeçalho */
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: #333;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.accordion-button:hover {
+  background-color: #e9ecef;
+  color: #640090;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #640090;
+  color: #fff;
+}
+/* Ícone custom para fechado (plus) */
+.accordion-button.collapsed::after {
+  content: "";
+  background: url("assets/svgs/plus.svg") no-repeat center;
+  background-size: contain;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+/* Ícone custom para aberto (minus) */
+.accordion-button:not(.collapsed)::after {
+  content: "";
+  background: url("assets/svgs/minus.svg") no-repeat center;
+  background-size: contain;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.accordion-button::after {
+  content: "";
+}
+.accordion-item {
+  margin: 10px 0 !important;
+  border: none;
+}
+.accordion-collapse {
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+/* Container do switch */
+.language-switch {
+  position: relative;
+  width: 60px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* pode ser hidden se preferir */
+}
+
+/* CheckBox escondido */
+.language-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Label que atua como “switch” */
+.language-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  width: 60px;
+  height: 28px;
+  background-color: #ccc;
+  border-radius: 14px;
+  transition: background-color 0.3s;
+}
+
+/* As opções de idioma dentro do label */
+.lang-option {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PT fica à esquerda */
+.lang-option-pt {
+  left: 6px;
+}
+
+/* EN fica à direita */
+.lang-option-en {
+  right: 6px;
+}
+
+/* Ajuste das bandeiras */
+.flag-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Quando o checkbox está marcado (EN selecionado) */
+.language-checkbox:checked + .language-label {
+  background-color: #640090; /* cor principal quando ativo */
+}
+
+/* Esconde PT quando ativado, e esconde EN quando desativado */
+.language-checkbox:checked + .language-label .lang-option-pt {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.language-checkbox:not(:checked) + .language-label .lang-option-en {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+h2 {
+  color: #640090;
 }
 
 .card {
-    background-color: var(--custom-PURPLE300);
-    color: var(--custom-GOLD);
-    text-align: center;
-    min-height: 25vh;
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    .card {
-        background-color: var(--custom-PURPLE300);
-        color: var(--custom-GOLD);
-        text-align: center;
-        min-height: 30vh;
-    }
-}
-
-@media (min-width: 1400px) {
-    .card {
-        background-color: var(--custom-PURPLE300);
-        color: var(--custom-GOLD);
-        text-align: center;
-        min-height: 24vh;
-    }
-}
-
-
-.card-text {
-    background-color: var(--custom-PURPLE300);
-    color: var(--custom-GOLD);
-    text-align: center;
-    vertical-align: baseline;
-}
-
-.mirror {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-.form-control {
-    color: var(--custom-PINK);
-    font-weight: bolder;
-}
-
-.form-control:focus {
-    color: var(--custom-PINK);
-    font-weight: bolder;
-}
-
-.form-control::placeholder {
-    color: var(--custom-PINK);
-    opacity: 1;
-    /* Firefox */
-}
-
-.form-check-input:checked {
-    background-color: var(--custom-PINK);
-    border-color: var(--custom-PINK);
-}
-
-.link {
-    color: var(--custom-GOLD);
-    text-decoration: none;
-}
-
-/* .mobile>div>div>div>div>p {
-    font-size: 1.3rem;
-} */
-
-
-/* .whats-app {
-    position: fixed;
-    cursor: pointer;
-    display: block;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: var(--custom-GOLD);
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    transition-duration: 0.5s;
-    animation: pulse 3s infinite;
-    z-index: 9000;
-}
-
-@keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0px rgba(255, 220, 39, 0.8);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(255, 220, 39, 0.5);
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(255, 220, 39, 0);
-    }
-  }
-.my-float {
-    margin-top: 10px;
-} */
-
-.loading {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    text-align: center;
-    opacity: 0.7;
-    background-color: #fff;
-    z-index: 9999;
-}
-
-.custom-loader {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: conic-gradient(#0000 10%, #EC00FF);
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 16px), #000 0);
-    animation: s3 1s infinite linear;
-    position: absolute;
-    left: calc(50% - 50px);
-    top:50%;
-    
-
-    
-}
-
-@keyframes s3 {
-    to {
-        transform: rotate(1turn)
-    }
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Alinha textos ao centro */
+  height: 100%; /* Garante que o card ocupe toda a altura disponível */
 }
