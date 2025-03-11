@@ -22,12 +22,20 @@ body {
   padding: 0 0;
 }
 
+.first-section {
+  padding-top: 3rem;
+}
+
 /* Para telas menores, caso queira alterar a imagem de fundo do footer */
 @media (max-width: 767px) {
   .footer-section {
     background: url("assets/pngs/bg.png") center center no-repeat;
     background-size: cover;
     color: #fff;
+  }
+
+  .first-section {
+    padding-top: 100px;
   }
 }
 
