@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Segurança Infantil - Magic Lamp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Fonte Gotham (exemplo) -->
+  <link rel="stylesheet" href="font.css" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css" />
+
+
+  <style>
+    body {
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .section-title {
+      color: #5a2ea6;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    .image-block {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .image-block img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .image-block h5 {
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #666;
+    }
+
+    .imagem {
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      toggleLanguage("pt");
+    });
+
+    function toggleLanguage(lang) {
+      const ptElements = document.querySelectorAll(".lang-pt");
+      const enElements = document.querySelectorAll(".lang-en");
+
+      if (lang === "pt") {
+        ptElements.forEach(el => el.style.display = "inline");
+        enElements.forEach(el => el.style.display = "none");
+      } else {
+        ptElements.forEach(el => el.style.display = "none");
+        enElements.forEach(el => el.style.display = "inline");
+      }
+    }
+
+    function toggleLanguageSwitch() {
+      const checkBox = document.getElementById("langToggle");
+      if (checkBox.checked) {
+        toggleLanguage("en");
+      } else {
+        toggleLanguage("pt");
+      }
+    }
+  </script>
+</head>
+
+<body class="container">
+
+  <!-- Botão de troca de idioma -->
+  <div class="hero-section">
+    <!-- Use .navbar-dark para manter toggler/botão hambúrguer claro em fundo escuro/transparente -->
+    <header class="navbar navbar-dark  justify-content-between px-3 fixed-top custom-navbar">
+      <div class="container">
+
+        <!-- Logo à esquerda -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/svgs/logo.svg" alt="Logo" width="150" />
+        </a>
+        <!-- Dropdown de idiomas (com bandeira) -->
+        <div class="language-switch ms-lg-3">
+          <input type="checkbox" class="language-checkbox" id="langToggle" onclick="toggleLanguageSwitch()" />
+          <label for="langToggle" class="language-label">
+            <!-- PT -->
+            <div class="lang-option lang-option-pt">
+              <img src="assets/svgs/brazil.svg" alt="Bandeira do Brasil" class="flag-icon" />
+              <span class="ms-1 d-none d-sm-inline">PT</span>
+            </div>
+            <!-- EN -->
+            <div class="lang-option lang-option-en">
+              <img src="assets/svgs/eua.svg" alt="Bandeira do Reino Unido" class="flag-icon" />
+              <span class="ms-1 d-none d-sm-inline">EN</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <h1 class="text-center mb-4" style="margin-top: 50px;">
+    <span class="lang-pt">Compromisso com a Segurança Infantil</span>
+    <span class="lang-en">Commitment to Child Safety</span>
+  </h1>
+
+  <p>
+    <span class="lang-pt">
+      Usar nossos aplicativos para prejudicar crianças é abominável e inaceitável. Nossos esforços para combater a
+      exploração infantil se concentram em detectar e relatar conteúdo que viole nossas políticas, além de trabalhar
+      de forma contínua para manter as crianças seguras.
+    </span>
+    <span class="lang-en">
+      Using our apps to harm children is abominable and unacceptable. Our efforts to combat child exploitation focus
+      on detecting and reporting content that violates our policies, while continuously working to keep children safe.
+    </span>
+  </p>
+
+  <h3 style="text-align: center;">
+    <span class="lang-pt">A <strong>Magic Lamp</strong> adota uma política de tolerância zero à exploração
+      infantil.</span>
+    <span class="lang-en"><strong>Magic Lamp</strong> adopts a zero-tolerance policy against child
+      exploitation.</span>
+  </h3>
+
+  <h2 class="section-title">🛡️
+    <span class="lang-pt">Recursos de denúncia</span>
+    <span class="lang-en">Reporting Tools</span>
+  </h2>
+
+  <p>
+    <span class="lang-pt">
+      Nossa plataforma permite que qualquer usuário denuncie conteúdos que considerar inapropriados, ofensivos ou que
+      violem nossos termos. As denúncias são avaliadas com prioridade e, quando necessário, os conteúdos são removidos
+      e as medidas legais cabíveis são tomadas.
+    </span>
+    <span class="lang-en">
+      Our platform allows any user to report content deemed inappropriate, offensive, or in violation of our terms.
+      Reports are prioritized and, when necessary, content is removed and appropriate legal measures are taken.
+    </span>
+  </p>
+
+  <p>
+    <span class="lang-pt">Locais onde a denúncia pode ser realizada:</span>
+    <span class="lang-en">Places where reports can be made:</span>
+  </p>
+
+  <ul>
+    <li><span class="lang-pt">Postagens no feed da home</span><span class="lang-en">Posts on the home feed</span></li>
+    <li><span class="lang-pt">Publicações de eventos</span><span class="lang-en">Event publications</span></li>
+    <li><span class="lang-pt">Notificações de publicação</span><span class="lang-en">Publication notifications</span>
+    </li>
+    <li><span class="lang-pt">Itens de lista em perfis de usuários</span><span class="lang-en">List items in user
+        profiles</span></li>
+  </ul>
+
+  <h3>📲
+    <span class="lang-pt">Como denunciar</span>
+    <span class="lang-en">How to Report</span>
+  </h3>
+
+  <p>
+    <span class="lang-pt">
+      Para denunciar um conteúdo, clique no ícone de <strong>três pontos</strong> no canto da postagem e selecione a
+      opção <strong>"Denunciar"</strong>. Este processo é simples, rápido e confidencial.
+    </span>
+    <span class="lang-en">
+      To report content, click on the <strong>three dots</strong> icon at the corner of the post and select
+      <strong>"Report"</strong>. This process is simple, fast, and confidential.
+    </span>
+  </p>
+
+  <div class="image-block">
+    <h2 class="section-title">📌
+      <span class="lang-pt">Post no Feed da Home</span>
+      <span class="lang-en">Post on Home Feed</span>
+    </h2>
+    <img class="imagem" src="assets/pngs/image1.png" alt="Post no feed da home" style="width: 250px;" />
+    <h5>Descrição</h5>
+    <p>
+      <span class="lang-pt">Usuários podem denunciar postagens diretamente no feed principal ao clicar no menu de
+        opções (três pontos) da publicação.</span>
+      <span class="lang-en">Users can directly report posts on the main feed by clicking the three-dot options menu on
+        the post.</span>
+    </p>
+  </div>
+
+  <div class="image-block">
+    <h2 class="section-title">📌
+      <span class="lang-pt">Publicação de Eventos</span>
+      <span class="lang-en">Event Publication</span>
+    </h2>
+    <img class="imagem" src="assets/pngs/image2.jpg" alt="Publicação de eventos" style="width: 250px;" />
+    <h5>Descrição</h5>
+    <p>
+      <span class="lang-pt">Dentro da área de eventos, cada publicação conta com o botão "Denunciar", permitindo o
+        controle e a segurança também nestes espaços.</span>
+      <span class="lang-en">In the events area, each publication has a "Report" button, allowing control and security
+        in these spaces.</span>
+    </p>
+  </div>
+
+  <div class="image-block">
+    <h2 class="section-title">📌
+      <span class="lang-pt">Notificação de Publicação</span>
+      <span class="lang-en">Publication Notification</span>
+    </h2>
+    <img class="imagem" src="assets/pngs/image3.jpg" alt="Notificação de publicação" style="width: 250px;" />
+    <h5>Descrição</h5>
+    <p>
+      <span class="lang-pt">As notificações enviadas aos usuários contêm publicações que também podem ser denunciadas,
+        promovendo um monitoramento eficaz do conteúdo.</span>
+      <span class="lang-en">Notifications sent to users contain publications that can also be reported, promoting
+        effective content monitoring.</span>
+    </p>
+  </div>
+
+  <div class="image-block">
+    <h2 class="section-title">📌
+      <span class="lang-pt">Item da Lista de um Usuário</span>
+      <span class="lang-en">User List Item</span>
+    </h2>
+    <img class="imagem" src="assets/pngs/image4.png" alt="Item da lista de um usuário" style="width: 250px;" />
+    <h5>Descrição</h5>
+    <p>
+      <span class="lang-pt">Os itens listados no perfil de um usuário têm um botão de denúncia dedicado, permitindo
+        que conteúdo inadequado seja sinalizado com facilidade.</span>
+      <span class="lang-en">Items listed in a user's profile have a dedicated report button, allowing inappropriate
+        content to be flagged easily.</span>
+    </p>
+  </div>
+
+  <footer>
+    <p>© Magic Tech Co. Ltda - Todos os direitos reservados.</p>
+    <p>CNPJ: 45.561.112/0001-50</p>
+  </footer>
+
+  <!-- Bootstrap JS (Popper + Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para alternar idiomas -->
+  <script>
+    // Exibe inicialmente o PT e esconde o EN
+    document.addEventListener("DOMContentLoaded", function () {
+      toggleLanguage("pt");
+    });
+
+    function toggleLanguage(lang) {
+      const ptElements = document.querySelectorAll(".lang-pt");
+      const enElements = document.querySelectorAll(".lang-en");
+
+      if (lang === "pt") {
+        ptElements.forEach((el) => (el.style.display = "inline"));
+        enElements.forEach((el) => (el.style.display = "none"));
+      } else {
+        ptElements.forEach((el) => (el.style.display = "none"));
+        enElements.forEach((el) => (el.style.display = "inline"));
+      }
+    }
+
+    function toggleLanguageSwitch() {
+      const checkBox = document.getElementById("langToggle");
+
+      if (checkBox.checked) {
+        // Se está marcado, definimos como EN
+        toggleLanguage("en");
+      } else {
+        // Se não está marcado, definimos como PT
+        toggleLanguage("pt");
+      }
+    }
+  </script>
+</body>
+
+</html>
